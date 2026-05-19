@@ -2,3 +2,7 @@ node_modules/
 *.log
 .env
 terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
