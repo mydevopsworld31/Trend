@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trend
+  template:
+    metadata:
+      labels:
+        app: trend
+    spec:
+      containers:
+      - name: trend-app
+        image: mydockerimage31/trend-app-image:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
